@@ -1,0 +1,73 @@
+*textobj-quote2.txt*	シングルクォート兼ダブルクォートのテキストオブジェクト
+
+Author  : LeafCage <leafcage+vim at gmail.com>
+License : MIT license  {{{
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+}}}
+
+==============================================================================
+目次						*textobj-quote2-contents*
+
+概要				|textobj-quote2-introduction|
+使い方				|textobj-quote2-usage|
+インターフェイス		|textobj-quote2-interface|
+  キーマッピング		  |textobj-quote2-key-mappings|
+
+
+==============================================================================
+概要						*textobj-quote2-introduction*
+
+*textobj-quote2* は同じ行内のシングルクォートまたはダブルクォートで囲まれ
+た文字列を対象にします。
+
+最新版:
+https://github.com/LeafCage/vim-textobj-quote2.vim
+
+
+==============================================================================
+使い方						*textobj-quote2-usage*
+
+以下のキーマッピングを定義してください。 >
+	omap iq <Plug>(textobj-quote2-i)
+	omap aq <Plug>(textobj-quote2-a)
+	xmap iq <Plug>(textobj-quote2-i)
+	xmap aq <Plug>(textobj-quote2-a)
+<
+ノーマルモードの状態で、シングルクォートやダブルクォートで囲まれた文字列の中で
+、diq とタイプすると、中の文字列を削除します。daq とタイプするとクォートごと削
+除します。リピートには対応していません。
+ビジュアルモードでは、iq で中の文字列を、aq で外側までを選択状態にします。
+
+
+==============================================================================
+インターフェイス				*textobj-quote2-interface*
+
+------------------------------------------------------------------------------
+キーマッピング					*textobj-quote2-key-mappings*
+
+<Plug>(textobj-quote2-i)			*<Plug>(textobj-quote2-i)*
+	有効モード: ビジュアル オペレータ
+
+
+<Plug>(textobj-quote2-a)			*<Plug>(textobj-quote2-a)*
+	有効モード: ビジュアル オペレータ
+
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:
